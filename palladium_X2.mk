@@ -8,10 +8,10 @@
 $(call inherit-product, device/realme/X2/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := fluid_X2
+PRODUCT_NAME := palladium_X2
 PRODUCT_DEVICE := X2
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X2
@@ -27,11 +27,16 @@ BUILD_FINGERPRINT := google/redfin/redfin:11/RQ2A.210305.006/7119741:user/releas
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_GOOGLE_RECORDER := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
+#Gapps
+PALLADIUM_BUILD_VARIANT := GAPPS
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+#PALLADIUM-PROPS
 PRODUCT_PRODUCT_PROPERTIES += \
-  ro.fluid.maintainer=FrenzyR \
-  ro.fluid.cpu=SDM730G
+    ro.palladiumdevice.maintainer=FrenzyR \
+    ro.palladiumdevice.cpu=SD730G \
+    ro.palladiumdevice.display=6.4 \
+    ro.palladiumdevice.displaytype=Super AMOLED
