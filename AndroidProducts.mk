@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_X2.mk
+    $(LOCAL_DIR)/xtended_X2.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_X2-user \
-    fluid_X2-userdebug \
-    fluid_X2-eng
+    xtended_X2-user \
+    xtended_X2-userdebug \
+    xtended_X2-eng
